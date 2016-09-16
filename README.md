@@ -1,3 +1,3 @@
 # Luna
 
-Internet das Coisas sem Internet
+Internet das Coisas
