@@ -1,0 +1,14 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"start": "electron ."
+  },
+  "author": "Malu Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.3"
+  }
+}

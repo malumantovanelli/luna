@@ -1,0 +1,7 @@
+@charset "UTF-8";
+img.resize{
+  max-width:30%;
+  max-height:30%;
+  padding: 15px;
+  align-content: center;
+}
