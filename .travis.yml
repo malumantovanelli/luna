@@ -24,7 +24,6 @@ script:
 branches:
   only:
     - master
-    - Testes
 
 notifications:
   slack: luna-org:y6ylXOrxL8Yt6PCi8yDVMjWV
