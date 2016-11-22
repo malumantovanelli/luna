@@ -12,7 +12,7 @@ before_script:
     - cd BrainsGroup
     - npm install
 
-script: karma start my.conf.js --single-run
+script: npm test
 
 branches:
   only:
