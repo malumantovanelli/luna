@@ -16,6 +16,7 @@ script: karma start my.conf.js --single-run
 branches:
   only:
     - master
+    - Testes
 
 after_script:
  - ./sonar-runner-2.4/bin/sonar-runner
