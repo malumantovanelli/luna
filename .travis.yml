@@ -9,6 +9,7 @@ before_install:
     - unzip sonar-runner-dist-2.4.zip
 
 before_script:
+    - cd BrainsGroup
     - npm install
 
 script: karma start my.conf.js --single-run
