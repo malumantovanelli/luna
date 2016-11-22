@@ -1,25 +1,30 @@
 language: node_js
 node_js:
   - "4"
-
-before_install:
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - wget http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.4/sonar-runner-dist-2.4.zip
-    - unzip sonar-runner-dist-2.4.zip
-
+  
+jdk:
+  - oraclejdk8
+  
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+  sonarqube: true
+   
 before_script:
+    - cd BrainsGroup
     - npm install
+    - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
-script: karma start my.conf.js --single-run
+script: 
+  - npm test
+  - cd ..
+  - sonar-scanner -Dsonar.login="582e67217eefd2fff9a0db381c59ca3afd6336af"
 
 branches:
   only:
     - master
     - Testes
-
-after_script:
- - ./sonar-runner-2.4/bin/sonar-runner
 
 notifications:
   slack: luna-org:y6ylXOrxL8Yt6PCi8yDVMjWV
