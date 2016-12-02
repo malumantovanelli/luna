@@ -19,7 +19,7 @@ before_script:
 script: 
   - npm test
   - cd ..
-  - sonar-scanner -Dsonar.login=582e67217eefd2fff9a0db381c59ca3afd6336af
+  - sonar-scanner
 
 branches:
   only:
