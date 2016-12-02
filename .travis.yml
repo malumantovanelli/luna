@@ -15,11 +15,15 @@ before_script:
     - cd BrainsGroup
     - npm install
     - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    
+env:
+  global:
+    - secure:582e67217eefd2fff9a0db381c59ca3afd6336af
 
 script: 
   - npm test
   - cd ..
-  - sonar-scanner -Dsonar.login=582e67217eefd2fff9a0db381c59ca3afd6336af
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN
 
 branches:
   only:
