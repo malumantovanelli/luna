@@ -19,7 +19,9 @@ before_script:
 script: 
   - npm test
   - cd ..
+  - rm -rf BrainsGroup/node_modules
   - sonar-scanner
+  
 
 branches:
   only:
